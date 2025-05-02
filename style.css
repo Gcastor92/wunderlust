@@ -1,0 +1,613 @@
+/* Gloria Castorena */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Molle&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: #000000;
+  }
+  
+  /* SKIP LINK */
+  #skip {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000000;
+    color: #ffffff;
+    padding: 8px;
+    z-index: 100;
+  }
+  #skip:focus {
+    top: 0;
+  }
+  h4, p, q, small, nav, button, form{
+    font-family: 'Montserrat', sans-serif;
+  } 
+  h1, h2, h3{
+   font-family: 'Molle';
+  }
+  
+  /* HEADER */
+  header {
+    background: linear-gradient(to bottom, #55BCD5, #ffffff); /* light blue to white */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  /* LOGO + TEXT */
+  #logo-heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+  }
+  
+  #logo img {
+    width: 200px;
+    height: auto;
+  }
+#toggle  {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+  
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+    justify-content: right;
+    flex-direction: column;
+    
+  }
+
+  header p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
+    width: 100%;
+   padding-top: 0.5rem;
+   flex-direction: column;
+  
+  }
+  
+  
+  /* NAVIGATION */
+ 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.25rem; 
+  }
+  
+  nav li {
+    margin: 0;
+  }
+  
+  nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.85rem;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #EAEAEA;
+    transition: background 0.3s ease;
+  }
+  
+  nav a:hover,
+  nav a:focus {
+    background-color: #EAEAEA;
+  }
+  
+  nav .active a {
+    background-color: #F6D64A;
+    color: black;
+    border: 1px solid #EAEAEA;
+  }
+  
+/* ~~~~~~~~~~ INTRO SECTION STYLES ~~~~~~~~~~ */
+#intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+  }
+  
+  
+  #intro h2,
+  #intro p {
+    grid-column: 1;
+  }
+  #intro p{
+    font-family: 'Montserrat';
+
+  }
+  #intro h2 {
+    font-size: 1.5rem;
+    font-family: 'Molle';
+  }
+  
+  #img-grid {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 1rem;
+  }
+  
+  
+  #img-grid picture {
+    grid-column: 1 / -1;
+  }
+  
+  #img-grid img,
+  #img-grid picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.5rem;
+  }
+  
+/* PLAN SECTION */
+#plan {
+    background-color: #F6D64A; 
+    padding: 2rem 1rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  #plan h3 {
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.75rem;
+    
+  }
+  
+  
+  #plan > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  #plan section {
+    background-color: #55BCD5; 
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 200px;
+    box-sizing: border-box;
+    border: 3px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  #plan section:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  #plan h4 {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  
+  #plan img {
+    width: 100px;
+    height: auto;
+  }
+  
+/* TESTIMONIALS SECTION */
+
+#testimonials {
+    background-color: #ffffff;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  
+  #testimonials h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    
+  }
+  
+  
+  #testimonials > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  #testimonials section {
+    max-width: 250px;
+  }
+  
+  
+  #testimonials img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  
+  #testimonials h4 {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+  }
+  
+  
+  #testimonials p {
+    margin: 0.25rem 0;
+    font-style: normal;
+    font-size: 0.95rem;
+    color: #222222;
+  }
+  
+  
+  #testimonials q {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #222222;
+    font-size: 0.95rem;
+  }
+  /* ABOUT  SECTION */
+#about {
+    background-color: #499BD2; 
+    color: #ffffff;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  
+  #about h3 {
+    color: #000000;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #about > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  
+  #about section {
+    max-width: 200px;
+    text-align: center;
+  }
+  
+ 
+  #about img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+ 
+  #about h4 {
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    margin: 0.5rem 0 0;
+    align-items: center;
+  }
+  
+  
+  #about p {
+    font-size: 0.75rem;
+    margin: 0.25rem 0 0;
+    color: #000000;
+  }
+  /* CONTACT SECTION */
+#contact {
+    padding: 3rem 1rem;
+    margin: 0 auto;
+    color: #000000;
+  }
+  
+  
+  #contact h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  #contact .form-required {
+    font-size: 1rem;
+    color: #222222;
+    margin-left: 0.5rem;
+  }
+  
+  #contact form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem 2rem;
+    align-items: flex-start;
+    justify-content: space-between; 
+  }
+
+  #names,
+  #nums,
+  #selects {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    flex: 1 1 100%;
+  }
+  
+  
+  #contact label {
+    display: block;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+  
+  .required {
+    color: #9B26B0;
+    margin-left: 0.25rem;
+  }
+  
+ 
+  #contact input[type="text"],
+  #contact input[type="email"],
+  #contact input[type="tel"],
+  #contact select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    /* display: grid; */
+    border: 2px solid #9B26B0;
+    border-radius: 0;
+    background-color: #ffffff;
+    color: #222222;
+   
+  }
+  
+  
+  
+  .radio-input {
+    display: grid;
+    align-items: center;
+    margin-right: 1rem;
+    position: relative;
+  }
+  
+  .radio-input input[type="radio"] {
+    appearance: none;
+    border: 2px solid #9B26B0;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .radio-input input[type="radio"]:checked::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #9B26B0;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+  
+  .radio-label {
+    margin-left: 0.5rem;
+    font-weight: normal;
+  }
+  
+  
+  #contact fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  #mySubmit {
+    background-color: #9B26B0;
+    color: #ffffff;
+    padding: 0.85rem 2rem;
+    font-size: 1rem;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  /* Footer */
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EAEAEA;
+    padding: 1rem 2rem;
+    font-size: 0.5rem;
+   
+  }
+  
+  footer p {
+    margin: 0;
+    color: #222222;
+  }
+  
+  footer a {
+    display: flex;
+    gap: 1.5rem;
+    color: #222222;
+    text-decoration: none;
+  }
+  
+  
+ 
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    #intro {
+      grid-template-columns: 1fr;
+    }
+  
+    #img-grid {
+      grid-template-columns: 1fr;
+      grid-column: auto;
+    }
+  
+    #img-grid picture {
+      grid-column: auto;
+    }
+  }
+  @media (min-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+  
+    nav {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    #plan-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    #destination-info .icons {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .testimonials {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+    
+      .testimonials .card {
+        width: 45%;
+      }
+    }
+    @media (min-width: 1024px) {
+        .image-grid {
+          flex-direction: row;
+        }
+      
+        form {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+      
+        form button {
+          grid-column: span 2;
+          width: 50%;
+          justify-self: center;
+        }
+      }
+  
