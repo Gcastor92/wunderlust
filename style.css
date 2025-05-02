@@ -72,14 +72,16 @@ body {
   }
   h4, p, q, small, nav, button, form{
     font-family: 'Montserrat', sans-serif;
+    
   } 
   h1, h2, h3{
    font-family: 'Molle';
+  
   }
   
   /* HEADER */
   header {
-    background: linear-gradient(to bottom, #55BCD5, #ffffff); /* light blue to white */
+    background: linear-gradient(to bottom, #55BCD5, #ffffff); 
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
